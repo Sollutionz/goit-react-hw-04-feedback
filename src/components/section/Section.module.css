@@ -1,0 +1,15 @@
+.title {
+    display: flex;
+    margin: 0;
+    color: saddlebrown;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px ;
+    font-size: 48px;
+}
+
+.section{
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+}

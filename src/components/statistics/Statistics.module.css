@@ -1,0 +1,42 @@
+.list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.item{
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.item:not(:last-child){
+    margin-bottom: 15px
+}
+
+.item:first-child{
+    color: white;
+    background-color: green;
+}
+
+.item:nth-child(2){
+    background-color: orange;
+}
+
+.item:nth-child(3){
+    background-color: red;
+}
+
+.item:nth-child(4){
+    margin-top: 50px;
+    background-color: violet;
+    margin-bottom: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.item:nth-child(5){
+    background-color: violet;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+
