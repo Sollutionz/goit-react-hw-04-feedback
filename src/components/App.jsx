@@ -21,29 +21,47 @@ export const App = () => {
     const countTotal = () => {
       setTotal(good + neutral + bad);
     };
-    countPositiveFeedbackPercentage()
-    countTotal()
-  },[good,neutral,bad]);
+    countPositiveFeedbackPercentage();
+    countTotal();
+  }, [good, neutral, bad]);
 
-  const handleClickGood = () => {
-    setGood(prev => prev + 1);
-  };
-  const handleClickNeutral = () => {
-    setNeutral(prev => prev + 1);
-  };
-  const handleClickBad = () => {
-    setBad(prev => prev + 1);
+  const handleClick = ({ target: {name} }) => {
+    console.log(name);
+    switch (name) {
+      case "Good":
+        setGood(prev => prev + 1);
+        break;
+      case "Neutral":
+        setNeutral(prev => prev + 1);
+        break;
+      case "Bad":
+        setBad(prev => prev + 1);
+        break;
+
+      default:
+        break;
+    }
   };
 
+  // const handleClickGood = () => {
+  //   setGood(prev => prev + 1);
+  // };
+  // const handleClickNeutral = () => {
+  //   setNeutral(prev => prev + 1);
+  // };
+  // const handleClickBad = () => {
+  //   setBad(prev => prev + 1);
+  // };
 
   return (
     <>
       <Section title="Please leave your feedback">
         {' '}
         <FeedbackOptions
-          handleClickGood={handleClickGood}
-          handleClickNeutral={handleClickNeutral}
-          handleClickBad={handleClickBad}
+          handleClick = {handleClick}
+          // handleClickGood={handleClickGood}
+          // handleClickNeutral={handleClickNeutral}
+          // handleClickBad={handleClickBad}
         />
       </Section>
       {total ? (
